@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-
-<script src="https://d3js.org/d3.v4.js"></script>
-
-<div id="dataVisual"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='style.css'>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
 
 <style>
 .xAxis line {
@@ -14,21 +23,39 @@
 <!-- Viridis color palette-->
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
+<body>
+  <header>
+    <div class="heading">
+        <h2 style="color: rgb(128, 166, 255);"> Denta Bramasta Hidayat</h2>
+        <h4 style="color: rgb(128, 166, 255);"">5025201116 </h3>
+        <h1><strong>My Information</strong></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum odio pariatur illo sapiente, animi modi voluptate fugiat repellendus ea,<br> similique amet recusandae deleniti id atque corrupti aliquid. Architecto, vero soluta. It is highly contagious, 
+            meaning it spreads fast.<br> Its novelty means that scientists aren't completely sure as to how it behaves<br> 
+            since they have very little history to go on.</p>
+            <ul>
+              <li><a href="./index.html">Google Chart</a></li>
+              <li><a href="./d3barchart.html">D3 Barchart</a></li>
+              <li><a href="./d3graph.html">D3 Graph</a></li>
+              <li><a href="./d3Wave.html">D3 Wave</a></li>
+            </ul>
+          </div>
+        
+</header>
+
+<div id="dataVisual"></div>
 
 <script>
-
-// set the dimensions and margins of the graph
-var margin = {top: 80, right: 30, bottom: 50, left:110},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+  var margin = {top: 160, right: 30, bottom: 50, left:220},
+    width = 800 - margin.left - margin.right,
+    height = 800 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#dataVisual")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
   .append("g")
-    .attr("transform",
+  .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
 //read data
@@ -128,5 +155,5 @@ function kernelEpanechnikov(k) {
     return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
   };
 }
-
 </script>
+</body>

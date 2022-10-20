@@ -22,7 +22,28 @@ header{
     
 }
 
-#logo{
-    margin-left: 5vw;
-}
+
+header ul {
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  header ul li {
+    position: relative;
+    list-style: none;
+  }
+  
+  header ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    padding-top: 40px;
+    margin-right: 35px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    font-weight: 500px;
+  }
    
